@@ -21,9 +21,9 @@ elixir(function(mix) {
 			'libs/font-awesome.css',
 			'libs/metisMenu.css',
 			'libs/sb-admin-2.css',
-			'libs/styles.css',
+			'libs/styles.css'
 						
-		], '.public/css/libs.css')
+		], './public/css/libs.css')
 		
 		.scripts([
 			'libs/bootstrap.js',
@@ -31,9 +31,9 @@ elixir(function(mix) {
 			'libs/jquery.js',
 			'libs/metisMenu.js',
 			'libs/sb-admin-2.js',
-			'libs/scripts.js',
+			'libs/scripts.js'
 						
-		], '.public/js/libs.js')
+		], './public/js/libs.js')
 	
 	
 });
