@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\UsersRequest;
+use App\Http\Requests\UsersRequest;
 use App\User;
 use App\Role;
 
@@ -51,8 +51,9 @@ class AdminUsersController extends Controller
 		$user->role_id = $request->role_id;
 		$user->isActive = $request->isActive;
 		$user->password = $request->password;
+		$user->photo_id = $request->file('file')->getClientOriginalName();
 		$user->save();
-		//return redirect('/admin/users/');
+		return redirect('/admin/users/');
 		
     }
 
