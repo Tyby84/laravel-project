@@ -15,6 +15,7 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+	
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,6 +25,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<script src="{{asset('js/libs.js')}}"></script>
 
 
 
@@ -347,7 +349,6 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('js/libs.js')}}"></script>
 
 
 @yield('footer')
@@ -355,6 +356,12 @@
 
 
 
+	<script src="{{asset('js/jquery.js')}}"></script>
+	<script src="{{asset('js/bootstrap.js')}}"></script>
+	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/metisMenu.js')}}"></script>
+	<script src="{{asset('js/sb-admin-2.js')}}"></script>
+	<script src="{{asset('js/scripts.js')}}"></script>
 
 </body>
 

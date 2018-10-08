@@ -21,22 +21,21 @@
         <th>Updated</th>
       </tr>
     </thead>
-    @if($users)
+    
     @foreach($users as $user)
     <tbody>
       <tr>
-        <td>{{$user->id}}</td>
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
         <td>{{$user->role->name}}</td>
         
         <td>
-		  <!--@if($user->isActive == 1)
+		  @if($user->isActive == 1)
      		Active
      		@else
      		Not Active
-     		@endif-->
-      		{{$user->isActive == 1 ? 'Active' : 'Not Active'}}
+     		@endif
+      		
        </td>
         
         <td>{{$user->created_at->diffForHumans()}}</td>
@@ -46,7 +45,7 @@
       
     </tbody>
     @endforeach
-    @endif
+   
   </table>
 </div>
 
