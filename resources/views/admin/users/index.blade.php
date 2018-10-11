@@ -15,8 +15,9 @@
         <th>Id</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Role</th>
+        
         <th>Active</th>
+        <th>HasPicture</th>
         <th>Created</th>
         <th>Updated</th>
       </tr>
@@ -36,6 +37,9 @@
      		Not Active
      		@endif-->
       		{{$user->isActive == 1 ? 'Active' : 'Not Active'}}
+       </td>
+       <td>
+       	{{isset($user->photo->file) ? 'Has Photo' : 'Has no photo'}}
        </td>
         
         <td>{{$user->created_at->diffForHumans()}}</td>
