@@ -12,5 +12,12 @@ class Photo extends Model
 		'image_size'
 	];
 	
+	protected $uploads = '/laravel-project/public/images/';
+	
+	
+	public function getFileAttribute($photo){
+		return $this->uploads . $photo;
+	}
+	
 	
 }

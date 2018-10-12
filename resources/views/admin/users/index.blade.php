@@ -19,7 +19,7 @@
         <th>Active</th>
         <th>HasPicture</th>
         <th>Created</th>
-        <th>Updated</th>
+        <th>Avatar</th>
       </tr>
     </thead>
     @if($users)
@@ -43,7 +43,14 @@
        </td>
         
         <td>{{$user->created_at->diffForHumans()}}</td>
-        <td>{{$user->updated_at->diffForHumans()}}</td>
+        <td>
+        	@if(isset($user->photo->file))
+        	 <img src="{{$user->photo->file}}" alt="Pic" height="50px" width="50px">
+        	
+        	@else
+        	'No Avatar yet..'
+        	@endif
+        </td>
         
       </tr>
       
