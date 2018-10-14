@@ -27,7 +27,7 @@
     <tbody>
       <tr>
         <td>{{$user->id}}</td>
-        <td>{{$user->name}}</td>
+        <td><a href="{{route('admin.users.edit', $user->id)}}">{{$user->name}}</a></td>
         <td>{{$user->email}}</td>
         
         <td>
@@ -44,12 +44,8 @@
         
         <td>{{$user->created_at->diffForHumans()}}</td>
         <td>
-        	@if(isset($user->photo->file))
-        	 <img src="{{$user->photo->file}}" alt="Pic" height="50px" width="50px">
+        	 <img src="{{$user->photo ? $user->photo->file : 'http://placehold.it/50x50' }}" alt="Pic" height="50px" width="50px">
         	
-        	@else
-        	'No Avatar yet..'
-        	@endif
         </td>
         
       </tr>
