@@ -70,7 +70,10 @@ $(document).ready(function(){
     //});
 
 
-
+	//closing message
+	$('span.close-mes').click(function(){
+		$('.session').addClass('session_close');
+	});
 
 
 

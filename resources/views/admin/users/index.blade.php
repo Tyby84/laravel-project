@@ -6,11 +6,11 @@
 
 <h1>Users</h1>
 	@if(Session::has('deleted_user'))
-		<p class="bg-danger">{{session('deleted_user')}}</p>
+		<p class="session del">{{session('deleted_user')}} <span class="close-mes">X</span> </p>
 	@elseif(Session::has('created_user'))
-		<p class="bg-danger">{{session('created_user')}}</p>
+		<p class="session">{{session('created_user')}} <span class="close-mes">X</span> </p>
 	@elseif(Session::has('updated_user'))
-		<p class="bg-danger">{{session('updated_user')}}</p>
+		<p class="session">{{session('updated_user')}} <span class="close-mes">X</span> </p>
 	@endif	
 	
 	
