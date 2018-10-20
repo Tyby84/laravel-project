@@ -48,6 +48,14 @@
 			<div class="form-group">
 				{!! Form::submit('Edit User',['class'=>'btn btn-primary']) !!}
 			</div>
+			<div class="col-sm-9">
+			{!! Form::model($user,['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id], 'files'=>true]) !!}
+			
+			
+			<div class="form-group">
+				{!! Form::submit('Delete User',['class'=>'btn btn-danger']) !!}
+			</div>
+		</div>
 		</div>
 	</div>
 	
