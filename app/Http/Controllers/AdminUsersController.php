@@ -22,7 +22,7 @@ class AdminUsersController extends Controller
     public function index()
     {
         //
-		$users = User::all();
+		$users = User::where('id','<',10)->orderBy('name','asc')->get();
 		
 		return view('admin.users.index', compact('users'));
     }
